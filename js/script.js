@@ -1,14 +1,18 @@
 import { cardsArray } from "./cards.js";
 
+const game = document.querySelector(".game");
+const grid = document.createElement("section");
+const scoreSpan = document.querySelector("#startGame");
+const resetBtn = document.querySelector("#scoreOutput");
+
 //Расширяем массив карт этим же массивом карт
 let gameGrid = [...cardsArray, ...cardsArray];
-let firstCard, secondCard;
 // let gameGrid = cardsArray.concat(cardsArray);
+let firstCard, secondCard;
+
 //Перемешиваем массив карт случайным образом
 gameGrid.sort(() => 0.5 - Math.random());
 
-const game = document.querySelector(".game");
-const grid = document.createElement("section");
 grid.setAttribute("class", "grid");
 // Добавляем секцию grid в div "game"
 game.appendChild(grid);

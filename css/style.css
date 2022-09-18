@@ -8,12 +8,6 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#controlPanel {
-  display: flex;
-  background-color: #6589f9;
-  align-items: center;
-}
-
 .game {
   height: 100vh;
   display: flex;
@@ -38,12 +32,13 @@ body {
   height: calc(25% - 10px);
   margin: 5px;
   position: relative;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 #controlPanel {
   display: flex;
   font-size: 20px;
+  background-color: #6589f9;
+  align-items: center;
   justify-content: center;
 }
 
