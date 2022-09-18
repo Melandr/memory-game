@@ -2,6 +2,7 @@ import { cardsArray } from "./cards.js";
 
 //Расширяем массив карт этим же массивом карт
 let gameGrid = [...cardsArray, ...cardsArray];
+let firstCard, secondCard;
 // let gameGrid = cardsArray.concat(cardsArray);
 //Перемешиваем массив карт случайным образом
 gameGrid.sort(() => 0.5 - Math.random());
@@ -25,3 +26,12 @@ gameGrid.forEach((item) => {
   grid.appendChild(card);
 });
 
+grid.addEventListener("click", function (event) {
+  let clicked = event.target;
+
+  if (clicked.nodeName === "SECTION") {
+    return;
+  }
+
+  clicked.classList.add("selected");
+});
