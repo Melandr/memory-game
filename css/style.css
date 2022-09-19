@@ -4,19 +4,19 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .game {
-  height: 100vh;
   display: flex;
   background-color: #6589f9;
 }
 
 .grid {
   width: 860px;
-  height: 450px;
+  height: calc(100vh - 60px);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -27,11 +27,10 @@ body {
   position: relative;
   margin: 5px;
   width: calc(16.66% - 10px);
-  height: calc(25% - 10px);
+  height: calc(22vh - (60px / 4));
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform 0.5s;
-  /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); */
 }
 
 .card.flip {
@@ -86,4 +85,9 @@ body {
 #scoreOutput {
   margin-left: 20px;
   font-weight: bold;
+}
+
+figure img {
+  margin: 0 20px;
+  height: 35px;
 }

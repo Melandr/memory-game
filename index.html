@@ -5,13 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Game</title>
+    <link rel="stylesheet" href="./css/style-modal.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" type="image/png" href="./assets/img/star.png" />
   </head>
   <body>
+    <div id="openModal" class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Размер игрового поля</h3>
+            <a href="#close" title="Close" class="close">×</a>
+          </div>
+          <div class="modal-body">
+            <label for="columns">Столбцов</label>
+            <input type="range" name="columns" id="columns" min="3" max="6" value="6"/>
+            <label for="rows">Рядов</label>
+            <input type="range" name="rows" id="rows" min="2" max="4" value="4"/>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="controlPanel">
       <button id="startGame">Новая игра</button>
       <div id="scoreOutput">Счет: <span id="atemptNumOutput">0</span></div>
+      <figure id="settings">
+        <a href="#openModal"><img src="./assets/img/settings.png" alt="settings" /></a>
+      </figure>
     </div>
     <div class="game"></div>
     <script type="module" src="./js/script.js"></script>
